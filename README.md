@@ -1,3 +1,3 @@
 # Modal
 
-Demo: 
+Demo: https://dithx.github.io/Modal/
