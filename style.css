@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.wrap-modal{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 300px;
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 10px 0;
+}
+
+.wrap-modal h1{
+    font-size: 3em;
+    color: #023e8a;
+}
+
+.wrap-modal .openModal{
+    background-color: #748cab;
+    padding: 15px 30px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.openModal:hover{
+    background-color: #5f718a;
+
+}
+
+/* Display Modal */
+#display-modal{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    height: 700px;
+    width: 600px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#display-modal.show{
+    display: flex;
+}
+
+.head-modal{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 40px;
+    /* height: 200px; */
+    line-height: 30px;
+}
+
+.head-modal h1{
+    font-size: 1.5em;
+}
+
+.head-modal p{
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    gap: 0 10px;
+}
+
+.search img{
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+}
+
+input[type=search]{
+    /* padding-top: 20px; */
+    border: none;
+    font-size: 1.1em;
+    opacity: 0.7;
+    outline: none;
+}
+
+.head-modal span{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    height: 1px;
+    opacity: 0.2;
+}
+
+.content-modal{
+    display: flex;
+    height: 100%;
+    gap: 20px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding-bottom: 20px;
+}
+
+/* untuk menghilangkan scrollbar di chrome */
+.content-modal::-webkit-scrollbar{
+    display: none;
+}
+
+.content-modal div{
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #dee2e6;
+}
+
+.wrap-button{
+    display: flex;
+    width: 100%;
+    gap: 0 20px;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: #f8f9fa;
+    padding: 30px;
+}
+
+.cancel, .continue{
+    padding: 15px 50px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cancel{
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+}
+
+.continue{
+    background-color: #3f37c9;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+
+@media screen and (max-width: 630px) {
+    #display-modal{
+        width: 550px;
+    }
+}
+@media screen and (max-width: 580px) {
+    #display-modal{
+        width: 400px;
+        height: 650px;
+    }
+
+    .head-modal h1{
+        font-size: 1.2em;
+    }
+
+    .head-modal p{
+        font-size: 0.7em;
+    }
+    .wrap-button{
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 420px) {
+    #display-modal{
+        width: 350px;
+    }
+
+}
+@media screen and (max-width: 420px) and (max-height: 680px) {
+    #display-modal{
+        width: 350px;
+        height: 600px;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    #display-modal{
+        width: 300px;
+        height: 400px;
+    }
+
+    .head-modal{
+        padding: 10px 40px;
+        line-height: 20px;
+    }
+
+    .head-modal .search{
+        font-size: 0.8em;
+    }
+
+    .search img{
+        width: 15px;
+        height: 15px;
+    }
+
+    .content-modal div{
+        width: 250px;
+        height: 150px;
+        border-radius: 10px;
+        background-color: #dee2e6;
+    }
+
+    .cancel, .continue{
+        padding: 10px 30px;
+    }
+}
